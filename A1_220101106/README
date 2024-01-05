@@ -1,0 +1,76 @@
+#TASK 1
+
+# AWK Script: Remove Comments from C Code
+
+## How to Use
+
+### Step 1: Preparation
+
+1. Save the `comments_remover.awk` script in the same folder as your C code file.
+
+### Step 2: Running the Script
+
+1. Open your command line terminal and navigate to the folder where your code and the `comments_remover.awk` script are located.
+
+2. Execute the following command:
+
+   $awk -f comments_remover.awk test1.c > test2.c
+   
+The resulting code without comments will be saved in a file named `test2.c`.
+
+### Step 3:Clean Code
+
+1. After running the command, a new file named `test2.c` will be created in the same folder, containing your code without comments.
+
+###Explanation of the code
+1. This AWK script removes comments from C/C++ code, streamlining files by eliminating both block and line comments.
+2. It scans through each line, detecting and removing comments, including block comments (`/* ... */`) and line comments (`// ...`).
+3. The resulting output contains the code without comments, improving code readability and focusing on the logic.
+
+## Note
+
+- If you prefer not to place `comments_remover.awk` in your source folder:
+  - Put it in another folder of your choice.
+  - Adjust the command, providing the full path to the `comments_remover.awk` script.
+
+- The resulting `test2.c` file will be generated alongside your original code file.
+
+
+
+
+#TASK 2
+
+# Time Difference Calculator with AWK
+
+This AWK script helps you calculate the time difference between two time values and presents the results in a tab-separated format.
+
+### Step 1: Preparation
+
+1. Copy the files `input_creation.awk` and `Code_task2.awk` to the directory where your input files are located.
+
+### Step 2: Running the Script
+
+1. Open your command line terminal.
+
+2. Navigate to the directory where `input_creation.awk` and `Code_task2.awk` are located.
+
+3. Run the following command:
+   
+   $awk -f input_creation.awk > test3 && awk -f Code_task2.awk test3 > test4
+   
+   This command executes the two AWK scripts sequentially: `input_creation.awk` to generate initial records and `Code_task2.awk` to calculate and format the time differences.
+
+### Step 3: Review the Output
+
+1. After running the command, two files named `test3` and `test4` will be created in the same directory.
+
+2. Open `test4` to see the calculated time differences presented in a clear and organized format.
+
+## Explanation of Code
+
+- `input_creation.awk`: This script generates simple tab-separated records using predefined separators to facilitate easy processing.
+
+- `Code_task2.awk`: This script takes input from `input_creation.awk`, converts the times in fields 1 and 2 to hours, minutes, and seconds, calculates the time difference in seconds, and then converts the difference back to the `hh:mm:ss` format.
+
+By following these steps, you can seamlessly calculate and format time differences between time values using the provided AWK scripts.
+
